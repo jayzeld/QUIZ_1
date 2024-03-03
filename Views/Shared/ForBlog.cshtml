@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        #section1 {
+            background-image: url(/img/bgslug.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <style>
+        .title {
+            text-align: center;
+            font-family: "Bebas Neue";
+            font-size: 100px;
+            color: darkorange;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .content {
+            text-align: center;
+            font-family: "Bebas Neue";
+            font-size: 30px;
+            color: white;
+            padding: 50px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px darkorange;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: darkorange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: orange;
+            }
+    </style>
+</head>
+<body id="section1">
+
+    <button onclick="goToHomePage()">Back to Home</button>
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "/"; 
+        }
+    </script>
+
+    @RenderBody()
+
+</body>
+</html>

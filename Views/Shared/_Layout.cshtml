@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CAT-ish</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/QUIZ_1.styles.css" asp-append-version="true" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>    
+    
+    <style>
+        #section1 {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            align-content: center;
+        }
+
+    </style>
+
+    <style>
+        .text{
+            font-family: 'Bebas Neue';
+            font-size: 60px;
+            text-align: center;
+            color: darkorange;
+            padding-top: 50px;
+
+        }
+
+        .sec1text{
+            font-family: 'Bebas Neue';
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            padding-top: 30px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Bebas Neue;
+        }
+
+
+        .tablink {
+            background-color: antiquewhite;
+            color: antiquewhite;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 50%;
+            font-family: Bebas Neue;
+        }
+
+            .tablink:hover {
+                font-family: Bebas Neue;
+            }
+
+
+        .tabcontent {
+            color: antiquewhite;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+
+        #Home {
+            background-color: antiquewhite;
+        }
+
+        #News {
+            background-color: antiquewhite;
+        }
+
+        #Contact {
+            background-color: antiquewhite;
+        }
+
+        #About {
+            background-color: antiquewhite;
+        }
+    </style>
+
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            background-color: darkorange;
+        }
+
+            .flex-container > div {
+                background-color: antiquewhite;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+            }
+    </style>
+
+    <style>
+        footer {
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div>
+        <div id="section1">
+            <button class="tablink" onclick="openPage('Home', this, 'darkorange')"
+                    id="defaultOpen">
+                <font color="black">HOME</font>
+            </button>
+            <button class="tablink" onclick="openPage('About', this, 'darkorange ')"><font color="black">About</font></button>
+
+            <div id="Home" class="tabcontent">
+
+                <div class="text">
+                    The Fascinating World of Feline Behavior: Exploring the Quirks and Charms of Cats
+                    <img src="img/bgsec1.jpg">
+      
+                </div>
+
+                <div class="sec1text">
+
+                    Cats have captivated humans for centuries with their mysterious and alluring behaviors. From their graceful movements to their independent nature, these enigmatic creatures never fail to intrigue us. In this blog post, we'll delve into the fascinating world of feline behavior, exploring the quirks and charms that make cats such beloved companions.
+                </div>
+
+                <div class="text">
+                    Cat Breeds: Exploring Diversity and Characteristics
+                    <img src="img/about.jpg" width="800" height="400">
+
+                </div>
+
+                <div class="sec1text">
+
+                    The world of cats is incredibly diverse, with a multitude of breeds boasting unique characteristics and traits. From the majestic Maine Coon to the sleek Siamese, each breed has its own distinct personality, appearance, and history. We take a closer look at some of the most popular cat breeds, exploring their origins, temperament, and care requirements. Whether you're drawn to long-haired beauties or short-haired stunners, there's a cat breed out there to suit every preference and lifestyle.
+                </div>
+
+                <div class="text">
+                    Some of the breeds:
+                </div>
+                     <div class="flex-container">
+
+                            <div class="card" style="width: 20rem;">
+                                <img class="card-img-top" src="img/breed1.jpg" alt="Card image cap" width="300" height="200">
+                                <div class="card-body">
+                                    <h5 class="card-title"><font color="black">Scottish Fold</font></h5>
+                                      <a href="@Url.Action("Index", "Blog", new { year = 2024, month = 3, slug = "slug1" })" class="btn btn-warning">Click for more info</a>
+
+                        </div>
+                            </div>
+
+
+                            <div class="card" style="width: 20rem;">
+                             <img class="card-img-top" src="img/breed2.jpg" alt="Card image cap" width="300" height="200">
+                                <div class="card-body">
+                                    <h5 class="card-title"><font color="black">British Shorthair</font></h5>
+                                       <a href="@Url.Action("Index", "Blog", new { year = 2024, month = 3, slug = "slug2" })" class="btn btn-warning">Click for more info</a>
+
+                        </div>
+                            </div>
+
+
+                            <div class="card" style="width: 20rem;">
+                              <img class="card-img-top" src="img/breed3.jpg" alt="Card image cap" width="300" height="200">
+                                <div class="card-body">
+                                    <h5 class="card-title"><font color="black">Siamese</font></h5>
+                                       <a href="@Url.Action("Index", "Blog", new { year = 2024, month = 3, slug = "slug3" })" class="btn btn-warning">Click for more info:</a>
+                        </div>
+                            </div>
+
+
+                            <div class="card" style="width: 20rem;">
+                              <img class="card-img-top" src="img/breed4.jpg" alt="Card image cap" width="300" height="200">
+                                <div class="card-body">
+                                    <h5 class="card-title"><font color="black">Ragdoll</font></h5>
+                                     <a href="@Url.Action("Index", "Blog", new { year = 2024, month = 3, slug = "slug4" })" class="btn btn-warning">Click for more info:</a>
+                        </div>
+                            </div>
+
+                
+                            <div class="card" style="width: 20rem;">
+                             <img class="card-img-top" src="img/breed5.jpg" alt="Card image cap" width="300" height="200">
+                                <div class="card-body">
+                                    <h5 class="card-title"><font color="black">Himalayan</font></h5>
+                                      <a href="@Url.Action("Index", "Blog", new { year = 2024, month = 3, slug = "slug5" })" class="btn btn-warning">Click for more info:</a>
+
+                                </div>
+                            </div>
+
+
+                            <div class="card" style="width: 20rem;">
+                              <img class="card-img-top" src="img/breed6.jpg" alt="Card image cap" width="300" height="200">
+                                <div class="card-body">
+                                    <h5 class="card-title"><font color="black">Exotic</font></h5>
+                                        <a href="@Url.Action("Index", "Blog", new { year = 2024, month = 3, slug = "slug6" })" class="btn btn-warning">Click for more info:</a>
+                                </div>
+                            </div>
+
+
+                     </div>
+
+                <div class="text">
+                    Cat Myths and Misconceptions:<br />
+                    <img src="img/myths.png" width="800" height="500">
+                </div>
+
+                <div class="sec1text">
+
+                    Throughout history, cats have been the subject of numerous myths and misconceptions, perpetuated by superstition, folklore, and urban legends. From the belief that black cats bring bad luck to the notion that cats have nine lives, we debunk common myths and set the record straight on feline-related fallacies. By dispelling misconceptions and understanding the truth about cats, we can foster a deeper appreciation for these remarkable animals and the joy they bring to our lives.
+                </div>
+                </div>
+
+                <div id="About" class="tabcontent">
+                    <div class="text">
+                        The History of Cats:
+                    </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jsj-hDW9bS8" frameborder="0" allowfullscreen style="display: block; margin: auto;"></iframe>
+
+                    <div class="sec1text">
+                     Cats have a rich history intertwined with human civilization. Originating from wild feline ancestors, domestic cats have been valued for their hunting prowess and companionship for thousands of years. From ancient Egypt, where they were revered as sacred beings, to their role in controlling rodent populations during the Middle Ages, cats have left an indelible mark on human society.
+                    </div>
+                    <div class="text">
+                     Understanding Feline Behavior:
+                    </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bRucGOoDHUw" frameborder="0" allowfullscreen style="display: block; margin: auto;"></iframe>
+
+                    <div class="sec1text">
+                        Despite their popularity as pets, cats often remain a mystery to many of us. Understanding their behavior can help foster a deeper connection with our feline friends. From the meaning behind their various vocalizations to deciphering their body language, we explore the subtle cues that cats use to communicate with us and with each other.
+                    </div>
+                    <div class="text">
+                        The Science of Catnip:
+                    </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/X2C96VJxYto" frameborder="0" allowfullscreen style="display: block; margin: auto;"></iframe>
+
+                    <div class="sec1text">
+                        Catnip, a member of the mint family, has a peculiar effect on many cats, eliciting euphoric responses and playful behavior. But what exactly is catnip, and why do cats react to it the way they do? We take a closer look at the science behind this curious phenomenon and its impact on our furry companions.
+                    </div>
+                    <div class="text">
+                      The Bond Between Cats and Humans:
+                    </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1JctiOvzqg0" frameborder="0" allowfullscreen style="display: block; margin: auto;"></iframe>
+
+                    <div class="sec1text">
+                        The bond between cats and humans is a special and complex relationship. While cats may have a reputation for independence, they are also capable of forming deep emotional connections with their human caregivers. We explore the mutual benefits of this bond and the ways in which cats enrich our lives with their companionship and affection.
+                    </div>
+                    <div class="text">
+                     Tips for Cat Care:
+                    </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KHmrh6eQ6EQ" frameborder="0" allowfullscreen style="display: block; margin: auto;"></iframe>
+
+                    <div class="sec1text">
+                    Providing the best possible care for our feline companions is essential for their health and well-being. From nutrition and grooming to environmental enrichment and veterinary care, we offer practical tips and advice for cat owners to ensure their furry friends lead happy and healthy lives.
+                </div>
+                </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>
+            Author: Chat GPT<br />
+            <a href="https://www.facebook.com/jayzeeeeel/">CAT-ish@example.com</a>
+        </p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
